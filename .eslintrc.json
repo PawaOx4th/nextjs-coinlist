@@ -6,9 +6,9 @@
     "jest": true
   },
   "extends": [
-    "plugin:react/recommended",
     "next/core-web-vitals",
     "airbnb",
+    "plugin:react/recommended",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
@@ -27,6 +27,12 @@
     "prettier"
   ],
   "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "no-undef": "off"
+      }
+    },
     // Only uses Testing Library lint rules in test files
     {
       "files": [
@@ -81,6 +87,9 @@
     "linebreak-style": "off",
     "semi": "off",
     "react/jsx-one-expression-per-line": "off",
-    "arrow-body-style": "off"
+    "arrow-body-style": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "camelcase": "off"
   }
 }
