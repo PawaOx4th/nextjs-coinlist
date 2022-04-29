@@ -43,10 +43,7 @@ const Home: NextPage<
           content="https://raw.githubusercontent.com/PawaOx4th/nextjs-coinlist/main/public/coin-bg.webp"
         />
 
-        <meta
-          property="twitter:card"
-          content="https://raw.githubusercontent.com/PawaOx4th/nextjs-coinlist/main/public/coin-bg.webp"
-        />
+        <meta property="twitter:card" content="Crypto price " />
         <meta
           property="twitter:url"
           content="https://coinlist.pawaox4th.com/"
