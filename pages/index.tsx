@@ -38,16 +38,25 @@ const Home: NextPage<
         <meta property="og:url" content="https://coinlist.pawaox4th.com/" />
         <meta property="og:title" content="Crypto price " />
         <meta property="og:description" content="API : coingecko.com" />
-        <meta property="og:image" content="../public/coin -bg.avif" />
+        <meta
+          property="og:image"
+          content="https://raw.githubusercontent.com/PawaOx4th/nextjs-coinlist/main/public/coin-bg.webp"
+        />
 
-        <meta property="twitter:card" content="../public/coin -bg.avif" />
+        <meta
+          property="twitter:card"
+          content="https://raw.githubusercontent.com/PawaOx4th/nextjs-coinlist/main/public/coin-bg.webp"
+        />
         <meta
           property="twitter:url"
           content="https://coinlist.pawaox4th.com/"
         />
         <meta property="twitter:title" content="Crypto price " />
         <meta property="twitter:description" content="API : coingecko.com" />
-        <meta property="twitter:image" content="../public/coin -bg.avif" />
+        <meta
+          property="twitter:image"
+          content="https://raw.githubusercontent.com/PawaOx4th/nextjs-coinlist/main/public/coin-bg.webp"
+        />
       </Head>
       <Layout className="bg-slate-100 min-h-screen  !w-full">
         <div className="grid grid-flow-row grid-cols-12 py-5 px-5 gap-4">
