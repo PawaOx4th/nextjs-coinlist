@@ -31,8 +31,6 @@ const Home: NextPage<
     <div className="font-montserrat font-medium">
       <Head>
         <title>Crypto price </title>
-
-        <title>Crypto price </title>
         <meta name="title" content="Crypto price " />
         <meta name="description" content="API : coingecko.com" />
 
@@ -42,7 +40,7 @@ const Home: NextPage<
         <meta property="og:description" content="API : coingecko.com" />
         <meta property="og:image" content="../public/coin -bg.avif" />
 
-        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:card" content="../public/coin -bg.avif" />
         <meta
           property="twitter:url"
           content="https://coinlist.pawaox4th.com/"
