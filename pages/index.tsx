@@ -3,8 +3,10 @@ import type {
   InferGetServerSidePropsType,
   NextPage
 } from "next"
-import Image from "next/image"
+
+import CoinPrice from "../src/components/CoinPrice"
 import Layout from "../src/components/Layout"
+import LogoCoin from "../src/components/LogoCoin"
 import services from "../src/configs/axiosGlobalConfig"
 import { ICoinMarket } from "../src/interfaces/ICoinMarket"
 
@@ -27,30 +29,15 @@ const Home: NextPage<
   return (
     <div className="font-montserrat font-medium">
       <Layout className="bg-slate-100 min-h-screen  !w-full">
-        <div className="flex justify-center items-center flex-col gap-5">
+        <div className="grid grid-flow-row grid-cols-12 py-5 px-5 gap-4">
           {markets.map((coin) => {
             return (
               <div
                 key={coin.id}
-                className="flex p-4 border rounded-md items-center justify-between w-[500px] hover:shadow-md transition-all hover:cursor-pointer "
+                className="col-span-12 sm:col-span-6 md:col-span-4  lg:col-span-3 xl:col-span-2 flex p-4 border rounded-md items-center justify-between  hover:shadow-md transition-all hover:cursor-pointer overflow-hidden bg-neutral-200"
               >
-                <div className="flex items-center gap-4">
-                  <Image src={coin.image} width="50px" height="50px" />
-                  <div className="w-20 line-clamp-2">
-                    <p className="truncate">{coin.name}</p>
-                  </div>
-                </div>
-                <div>
-                  <strong
-                    className={`${
-                      coin.price_change_24h.toString().startsWith("-")
-                        ? "text-red-600"
-                        : "text-blue-600"
-                    }`}
-                  >
-                    {Number.parseFloat(`${coin.price_change_24h}`).toFixed(4)}
-                  </strong>
-                </div>
+                <LogoCoin coin={coin} />
+                <CoinPrice price={coin.price_change_24h} />
               </div>
             )
           })}
