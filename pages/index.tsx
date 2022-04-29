@@ -3,6 +3,7 @@ import type {
   InferGetServerSidePropsType,
   NextPage
 } from "next"
+import Head from "next/head"
 
 import CoinPrice from "../src/components/CoinPrice"
 import Layout from "../src/components/Layout"
@@ -28,6 +29,28 @@ const Home: NextPage<
 > = ({ markets }) => {
   return (
     <div className="font-montserrat font-medium">
+      <Head>
+        <title>Crypto price </title>
+
+        <title>Crypto price </title>
+        <meta name="title" content="Crypto price " />
+        <meta name="description" content="API : coingecko.com" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://coinlist.pawaox4th.com/" />
+        <meta property="og:title" content="Crypto price " />
+        <meta property="og:description" content="API : coingecko.com" />
+        <meta property="og:image" content="../public/coin -bg.avif" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://coinlist.pawaox4th.com/"
+        />
+        <meta property="twitter:title" content="Crypto price " />
+        <meta property="twitter:description" content="API : coingecko.com" />
+        <meta property="twitter:image" content="../public/coin -bg.avif" />
+      </Head>
       <Layout className="bg-slate-100 min-h-screen  !w-full">
         <div className="grid grid-flow-row grid-cols-12 py-5 px-5 gap-4">
           {markets.map((coin) => {
