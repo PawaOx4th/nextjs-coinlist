@@ -36,7 +36,7 @@ const Home: NextPage<
                 key={coin.id}
                 className="col-span-12 sm:col-span-6 md:col-span-4  lg:col-span-3 xl:col-span-2 flex p-4 border rounded-md items-center justify-between  hover:shadow-md transition-all hover:cursor-pointer overflow-hidden bg-neutral-200"
               >
-                <LogoCoin coin={coin} />
+                <LogoCoin coin={coin} coinName={coin.name} />
                 <CoinPrice price={coin.price_change_24h} />
               </div>
             )
